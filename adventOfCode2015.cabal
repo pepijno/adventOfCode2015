@@ -1,0 +1,59 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.2.
+--
+-- see: https://github.com/sol/hpack
+
+name:           adventOfCode2015
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/pepijno/adventOfCode2015#readme>
+homepage:       https://github.com/pepijno/adventOfCode2015#readme
+bug-reports:    https://github.com/pepijno/adventOfCode2015/issues
+author:         pepijno
+maintainer:     pepijno
+copyright:      2020 pepijno
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/pepijno/adventOfCode2015
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_adventOfCode2015
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , split
+  default-language: Haskell2010
+
+executable app
+  main-is: Main.hs
+  hs-source-dirs:
+      app
+  ghc-options: -O2 -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      adventOfCode2015
+    , base >=4.7 && <5
+    , split
+  default-language: Haskell2010
+
+test-suite adventOfCode2015-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  hs-source-dirs:
+      test
+  ghc-options: -O2 -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      adventOfCode2015
+    , base >=4.7 && <5
+    , split
+  default-language: Haskell2010
