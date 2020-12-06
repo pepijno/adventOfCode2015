@@ -37,8 +37,8 @@ _exe-defs: &exe-defaults
   - -with-rtsopts=-N
 
 executables:
-  app:
-    main:                Main.hs
+  day1:
+    main: Day1.hs
     <<: *exe-defaults
 
 tests:

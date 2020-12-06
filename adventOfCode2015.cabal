@@ -35,8 +35,8 @@ library
     , split
   default-language: Haskell2010
 
-executable app
-  main-is: Main.hs
+executable day1
+  main-is: Day1.hs
   hs-source-dirs:
       app
   ghc-options: -O2 -threaded -rtsopts -with-rtsopts=-N
