@@ -1,6 +1,6 @@
 module Main where
 
-import Lib
+import Lib hiding (parse)
 
 parse :: Char -> Int
 parse '(' = 1

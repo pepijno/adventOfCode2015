@@ -20,9 +20,12 @@ description:         Please see the README on GitHub at <https://github.com/pepi
 
 dependencies:
 - base >= 4.7 && < 5
+- containers
 - split
 - pureMD5
 - utf8-string
+- attoparsec
+- text
 
 library:
   source-dirs: src
@@ -39,6 +42,12 @@ _exe-defs: &exe-defaults
   - -with-rtsopts=-N
 
 executables:
+  day7:
+    main: Day7.hs
+    <<: *exe-defaults
+  day6:
+    main: Day6.hs
+    <<: *exe-defaults
   day5:
     main: Day5.hs
     <<: *exe-defaults
