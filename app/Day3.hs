@@ -26,4 +26,4 @@ solve2 xs = length . nub $ (houses sms) ++ (houses rsms)
     rsms = extractMoves even $ head xs
 
 main :: IO()
-main = mainWrapper "day3" [solve1, solve2]
+main = mainWrapper "day3" solve1 solve2

@@ -17,4 +17,4 @@ solve2 xs = head . filter (hasCorrectHash code 6) $ [1..]
   where code = head xs
 
 main :: IO()
-main = mainWrapper "day4" [solve1, solve2]
+main = mainWrapper "day4" solve1 solve2

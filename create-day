@@ -22,11 +22,11 @@ echo "module Main where
 import Lib
 
 solve1 :: [String] -> Int
-solve1 = undefined
+solve1 = 0
 
 solve2 :: [String] -> Int
-solve2 = solve1
+solve2 = 0
 
 main :: IO()
-main = mainWrapper \"day${input}\" [solve1, solve2]" >> $FILE
+main = mainWrapper \"day${input}\" solve1 solve2" >> $FILE
 git add $FILE

@@ -56,4 +56,4 @@ solve2 xs = snd . eval "a" . Map.insert "b" (Constant val) . Map.fromList $ pars
         val = snd . eval "a" . Map.fromList $ parsed
 
 main :: IO()
-main = mainWrapper "day7" [solve1, solve2]
+main = mainWrapper "day7" solve1 solve2

@@ -14,4 +14,4 @@ solve2 :: [String] -> Int
 solve2 = length . takeWhile (/=(-1)) . scanl (+) 0 . map parse . head
 
 main :: IO()
-main = mainWrapper "day1" [solve1, solve2]
+main = mainWrapper "day1" solve1 solve2

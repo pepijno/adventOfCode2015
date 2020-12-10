@@ -60,4 +60,4 @@ solve2 :: [String] -> Int
 solve2 = sum . map snd . M.toList . foldl executeInstructionElf initMapElf . map (unsafeParse parseInstructionElf)
 
 main :: IO()
-main = mainWrapper "day6" [solve2]
+main = mainWrapper "day6" solve1 solve2

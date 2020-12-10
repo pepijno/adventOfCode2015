@@ -19,4 +19,4 @@ solve2 :: [String] -> Int
 solve2 = sum . map (toRibbon . map read . splitOn "x")
 
 main :: IO()
-main = mainWrapper "day2" [solve1, solve2]
+main = mainWrapper "day2" solve1 solve2

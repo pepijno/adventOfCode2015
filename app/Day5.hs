@@ -27,4 +27,4 @@ solve2 :: [String] -> Int
 solve2 = length . filter isNice2
 
 main :: IO()
-main = mainWrapper "day5" [solve1, solve2]
+main = mainWrapper "day5" solve1 solve2
