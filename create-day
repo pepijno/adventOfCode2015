@@ -22,10 +22,10 @@ echo "module Main where
 import Lib
 
 solve1 :: [String] -> Int
-solve1 = 0
+solve1 i = 0
 
 solve2 :: [String] -> Int
-solve2 = 0
+solve2 i = 0
 
 main :: IO()
 main = mainWrapper \"day${input}\" solve1 solve2" >> $FILE
