@@ -12,7 +12,9 @@ module Lib (
   integer,
   stringLiteral,
   whiteSpace,
-  letters
+  letters,
+  splitBy,
+  notNull
 ) where
 
 import Data.Char
@@ -71,8 +73,13 @@ string = sequenceA . map char
 splitBy :: (Char -> Bool) -> Parser String
 splitBy f = Parser $ \input -> Just $ span f input
 
+notNull :: Parser [a] -> Parser [a]
+notNull (Parser p) = Parser $ \input -> do
+  (input', rest) <- p input
+  if null input' then Nothing else Just (input', rest)
+
 integer :: Parser Int
-integer = read <$> splitBy isDigit
+integer = read <$> notNull (splitBy (\x -> isDigit x || x == '-'))
 
 whiteSpace :: Parser String
 whiteSpace = splitBy isSpace
