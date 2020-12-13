@@ -24,8 +24,6 @@ dependencies:
 - split
 - pureMD5
 - utf8-string
-- attoparsec
-- text
 
 library:
   source-dirs: src
@@ -42,6 +40,9 @@ _exe-defs: &exe-defaults
   - -with-rtsopts=-N
 
 executables:
+  day9:
+    main: Day9.hs
+    <<: *exe-defaults
   day8:
     main: Day8.hs
     <<: *exe-defaults
