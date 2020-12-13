@@ -11,6 +11,7 @@ module Lib (
   string,
   integer,
   stringLiteral,
+  stringLiteralUntil,
   whiteSpace,
   letters,
   splitBy,
@@ -89,3 +90,6 @@ letters = splitBy isLetter
 
 stringLiteral :: Parser String
 stringLiteral = splitBy (not . isSpace)
+
+stringLiteralUntil :: Char -> Parser String
+stringLiteralUntil c = splitBy (\x -> not (isSpace x) && x /= c)
