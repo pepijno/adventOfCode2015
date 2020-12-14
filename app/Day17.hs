@@ -14,7 +14,7 @@ solve n (x:xs) = (solve n xs) ++ (map (x:) $ solve (n - x) xs)
 solve1 :: [String] -> Int
 solve1 = length . solve 150 . map read
 
--- solve2 :: [String] -> Int
+solve2 :: [String] -> Int
 solve2 = length . head . groupBy ((==) `on` length) . sortBy (compare `on` length) . solve 150 . map read
 
 main :: IO()

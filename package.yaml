@@ -24,6 +24,10 @@ dependencies:
 - split
 - pureMD5
 - utf8-string
+- vector
+- distributive
+- adjunctions
+- comonad
 
 library:
   source-dirs: src
@@ -40,6 +44,9 @@ _exe-defs: &exe-defaults
   - -with-rtsopts=-N
 
 executables:
+  day18:
+    main: Day18.hs
+    <<: *exe-defaults
   day17:
     main: Day17.hs
     <<: *exe-defaults
